@@ -1,0 +1,438 @@
+@import url("../../css/fonts.css");
+@import url("../../css/color.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+body {
+  background: var(--nbg);
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header #navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 70px;
+  font-family: "lalezar";
+  border-bottom: 1px solid #002c3e14;
+}
+header #navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 100px;
+  font-size: 22px;
+}
+header #navbar ul li a {
+  text-decoration: none;
+  color: var(--nblue);
+}
+
+header #navbar #membership {
+  display: flex;
+  gap: 10px;
+}
+
+header #navbar #membership button {
+  cursor: pointer;
+}
+
+header #navbar #membership button:first-child {
+  width: 125px;
+  height: 50px;
+  border: 2px solid var(--nred);
+  border-radius: 15px;
+  margin: 0;
+  background-color: var(--nred);
+  font-size: 20px;
+  color: var(--nblue);
+  position: relative;
+  font-family: "lalezar";
+  transition: all 0.2s ease-in-out;
+}
+
+header #navbar #membership button:first-child:hover {
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+}
+
+header #navbar #membership button:last-child {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 15px;
+  margin: 0;
+  border: none;
+  color: var(--nblue);
+  transition: all 0.2s ease-in-out;
+}
+
+header #navbar #membership button:last-child:hover {
+  color: var(--nred);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin: 80px;
+  display: flex;
+  align-items: center;
+}
+
+#registerBox {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#registerBox .mainBox {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 170px;
+  align-items: center;
+  background-image: url('../../img/valorant-2022.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  position: relative;
+  font-family: "vazir";
+  font-size: 20px;
+  color: #dddddd;
+}
+
+#registerBox .mainBox::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  background-color: #0005075f;
+  backdrop-filter: brightness(100px);
+  backdrop-filter: blur(1px);
+  border-radius: 5px;
+  z-index: 0;
+}
+
+
+
+
+#registerBox .mainBox .signup,
+#registerBox .mainBox .login {
+  text-align: center;
+  padding: 10px;
+  z-index: 2;
+}
+
+#registerBox .mainBox .signup .signupBtn,
+#registerBox .mainBox .login .loginBtn {
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  font-family: "lalezar";
+  font-size: 18px;
+  color: var(--nblue);
+  background-color: var(--nbg);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+
+/* <!-- Input Sliding Start --> */
+#registerBox .mainBox .inputSliding {
+  width: 400px;
+  height: 550px;
+  background-color: #002c3e47;
+  position: absolute;
+  display: flex;
+  left: 60px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in-out;
+  z-index: 3;
+}
+
+#registerBox .mainBox .inputSliding.active {
+  left: 445px;
+}
+/* <!-- Input Sliding End --> */
+
+
+/* <!-- For SIGNUP Start --> */
+#registerBox .mainBox .inputSliding .signupBox {
+  width: 100%;
+  display: flex;
+  transition: all .5s ease-in-out;
+  position: relative;
+  left: -20px;
+  visibility: visible;
+  
+}
+
+#registerBox .mainBox .inputSliding .signupBox.hidden {
+  left: -100px;
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+#registerBox .mainBox .inputSliding .signupBox form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: initial;
+}
+
+.signupBox .inputBoxSignUp {
+  position: relative;
+}
+
+.signupBox .inputBoxSignUp input {
+  width: 300px;
+  height: 40px;
+  background-color: #91919128;
+  border:transparent ;
+  border-style: solid;
+  border-radius: 5px;
+  outline: none;
+  margin: 20px;
+  padding: 10px;
+  color: var(--nbg);
+  transition: all .4s ease-in-out ;
+}
+
+.signupBox .inputBoxSignUp input:focus {
+  border: 2px solid rgba(255, 255, 255, 0.27) ; 
+
+}
+
+.signupBox .inputBoxSignUp .passwordBox {
+  width: 100%;
+  display: flex;
+}
+
+.signupBox .inputBoxSignUp .passwordBox input {
+  width: calc(300px / 2.32);
+}
+
+.signupBox .inputBoxSignUp label {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 14px;
+  color: #cbcbcb72;
+  transition: 0.5s;
+}
+
+.signupBox .inputBoxSignUp .passwordBox label.labelRePass {
+  right: 200px;
+}
+
+.signupBox .inputBoxSignUp input.rePass:valid ~ label,
+.signupBox .inputBoxSignUp input.rePass:focus ~ label {
+  color: #cbcbcbae;
+  transform: translateX(10px) translateY(-20px);
+}
+
+.signupBox .inputBoxSignUp input.otherInput:valid ~ label.otherInput,
+.signupBox .inputBoxSignUp input.otherInput:focus ~ label.otherInput {
+  color: #cbcbcbae;
+  transform: translateX(5px) translateY(-20px);
+  
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitForm .rulesBox {
+  display: flex;
+  gap: 10px;
+}
+.submitForm .rulesBox span a {
+  color: var(--nlink);
+}
+
+.submitForm .signupBtn {
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+  border: transparent;
+  border-radius: 5px;
+  font-family: 'lalezar';
+  font-size: 16px;
+  background-color: var(--nred);
+  color: var(--nblue);
+  cursor: pointer;
+  transition: all 10ms ease-out;
+}
+
+.submitForm .signupBtn:active {
+  background-color: var(--nblue);
+  color: var(--nred);
+}
+/* <!-- For SIGNUP End --> */
+
+
+/* <!-- For LOGIN Start --> */
+#registerBox .mainBox .inputSliding .loginBox {
+  width: 100%;
+  transition: all .5s ease-in-out;
+  position: relative;
+  display: flex;
+  left: 315px;
+  visibility: visible;
+}
+#registerBox .mainBox .inputSliding .loginBox.hidden {
+  left: 100px;
+  opacity: 0;
+  visibility: hidden;
+  
+  
+}
+
+#registerBox .mainBox .inputSliding .loginBox form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: initial;
+}
+
+.loginBox .inputBoxLogin {
+  position: relative;
+}
+
+.loginBox .inputBoxLogin input {
+  width: 300px;
+  height: 40px;
+  background-color: #91919128;
+  border:transparent ;
+  border-style: solid;
+  border-radius: 5px;
+  outline: none;
+  margin: 20px;
+  padding: 10px;
+  color: var(--nbg);
+  transition: all .4s ease-in-out ;
+}
+
+.loginBox .inputBoxLogin input:focus {
+  border: 2px solid rgba(255, 255, 255, 0.27) ; 
+
+}
+
+
+.loginBox .inputBoxLogin .passwordBox input {
+  width: calc(300px / 2.32);
+}
+
+.loginBox .inputBoxLogin label {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 14px;
+  color: #cbcbcb72;
+  transition: 0.5s;
+}
+
+.loginBox .inputBoxLogin .passwordBox label.labelRePass {
+  right: 200px;
+}
+
+.loginBox .inputBoxLogin input.rePass:valid ~ label,
+.loginBox .inputBoxLogin input.rePass:focus ~ label {
+  color: #cbcbcbae;
+  transform: translateX(10px) translateY(-20px);
+}
+
+.loginBox .inputBoxLogin input.otherInput:valid ~ label.otherInput,
+.loginBox .inputBoxLogin input.otherInput:focus ~ label.otherInput {
+  color: #cbcbcbae;
+  transform: translateX(5px) translateY(-20px);
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitForm .rulesBox {
+  display: flex;
+  gap: 10px;
+}
+.submitForm .rulesBox span a {
+  color: var(--nlink);
+}
+
+.submitForm .loginBtn {
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+  border: transparent;
+  border-radius: 5px;
+  font-family: 'lalezar';
+  font-size: 16px;
+  background-color: var(--nred);
+  color: var(--nblue);
+  cursor: pointer;
+  transition: all 10ms ease-out;
+}
+
+.submitForm .loginBtn:active {
+  background-color: var(--nblue);
+  color: var(--nred);
+}
+/* <!-- For LOGIN End --> */
+
+
+/* <!-- FOOTER Start --> */
+#footer {
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.05);
+  font-family: "vazir";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px;
+}
+#footer i.fa-telegram {
+  cursor: pointer;
+  color: var(--nblue);
+  font-size: 20px;
+}
+
+#footer i.fa-copyright {
+  display: flex;
+  gap: 5px;
+  flex-direction: row-reverse;
+}
+/* <!-- FOOTER End --> */

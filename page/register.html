@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script src="https://kit.fontawesome.com/c0ccfede4a.js" crossorigin="anonymous"></script>
+      <script src="../js/app.js" defer></script>
+    <link rel="stylesheet" href="./css/register.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav id="navbar">
+          <ul>
+            <li class="home"><a href="#">خانه</a></li>
+            <li class="games"><a href="#">بازی ها</a></li>
+          </ul>
+          <div id="membership">
+            <button class="btnSignUp">ثبت نام</button>
+            <button class="material-symbols-rounded btnLogin">person</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div id="registerBox">
+          <div class="mainBox">
+            <div class="signup">
+              <h5>حساب کاربری ندارید ؟</h5>
+              <button class="signupBtn">ثبت نام</button>
+            </div>
+            <div class="login">
+              <h5>حساب کاربری دارید ؟</h5>
+              <button class="loginBtn">ورود</button>
+            </div>
+            <div class="inputSliding">
+              <!-- For SIGNUP Start -->
+              <div class="signupBox hidden">
+                <form>
+                  <div class="inputBoxSignUp">
+                    <input type="text" class="otherInput" required />
+                    <label for="" class="otherInput">نام کاربری</label>
+                  </div>
+                  <div class="inputBoxSignUp">
+                    <div class="passwordBox">
+                      <input type="password" class="otherInput" required />
+                      <label for="" class="otherInput">رمز عبور</label>
+                      <input type="password" class="rePass" required />
+                      <label for="" class="labelRePass">تکرار رمز عبور</label>
+                    </div>
+                  </div>
+                  <div class="inputBoxSignUp">
+                    <input type="text" class="otherInput" required />
+                    <label for="" class="otherInput">ایمیل</label>
+                  </div>
+                  <div class="inputBoxSignUp">
+                    <input type="tel" class="otherInput" required />
+                    <label for="" class="otherInput">شماره تلفن</label>
+                  </div>
+
+                  <div class="submitForm">
+                    <div class="rulesBox">
+                      <input type="checkbox" />
+                      <span><a href="#">قوانین</a> را میپذیرم</span>
+                    </div>
+                    <button class="signupBtn">ثبت نام</button>
+                  </div>
+                </form>
+              </div>
+              <!-- For SIGNUP End -->
+
+              <!-- For LOGIN Start -->
+              <div class="loginBox">
+                <form>
+                  <div class="inputBoxLogin">
+                    <input type="text" class="otherInput" required />
+                    <label for="" class="otherInput">نام کاربری</label>
+                  </div>
+                  <div class="inputBoxLogin">
+                    <input type="password" class="otherInput" required />
+                    <label for="" class="otherInput">رمز عبور</label>
+                  </div>
+
+                  <div class="submitForm">
+                    <div class="rulesBox">
+                      <input type="checkbox" />
+                      <span>مرا به خاطر بسپار</span>
+                    </div>
+                    <button class="loginBtn">ورود</button>
+                  </div>
+                </form>
+              </div>
+              <!-- For LOGIN End -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div id="footer">
+          <a href="#">
+            <i class="fa-brands fa-telegram" ></i>
+          </a>
+          <i class="fa-regular fa-copyright fa-2xs">My Website</i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/register.js"></script>
+  </body>
+</html>
